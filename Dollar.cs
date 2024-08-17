@@ -16,6 +16,6 @@ public class Dollar
 
     public override bool Equals(object? obj)
     {
-        return true;
+        return ((Dollar)obj).amount == amount;
     }
 }
