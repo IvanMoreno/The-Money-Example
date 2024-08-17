@@ -9,7 +9,7 @@ namespace TheMoneyExample.Tests;
 // [] Make "amount" private
 // [x] Dollar side-effects?
 // [] Money rounding?
-// [] equals()
+// [x] equals()
 // [] hashCode()
 
 public class Tests
