@@ -30,8 +30,8 @@ public class Dollar
         this.amount = amount;
     }
 
-    public void Times(int howMuch)
+    public void Times(int multiplier)
     {
-        amount = amount * 2;
+        amount = amount * multiplier;
     }
 }
