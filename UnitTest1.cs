@@ -20,3 +20,16 @@ public class Tests
         Assert.AreEqual(10, five.amount);
     }
 }
+
+public class Dollar
+{
+    public int amount;
+
+    public Dollar(int amount)
+    {
+    }
+
+    public void times(int howMuch)
+    {
+    }
+}
