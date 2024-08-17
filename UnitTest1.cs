@@ -27,10 +27,11 @@ public class Dollar
 
     public Dollar(int amount)
     {
+        this.amount = amount;
     }
 
     public void Times(int howMuch)
     {
-        amount = 5 * 2;
+        amount = amount * 2;
     }
 }
