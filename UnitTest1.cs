@@ -23,7 +23,7 @@ public class Tests
 
 public class Dollar
 {
-    public int amount = 10;
+    public int amount;
 
     public Dollar(int amount)
     {
@@ -31,5 +31,6 @@ public class Dollar
 
     public void times(int howMuch)
     {
+        amount = 5 * 2;
     }
 }
