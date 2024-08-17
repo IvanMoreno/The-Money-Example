@@ -16,7 +16,7 @@ public class Tests
     public void TestMultiplication()
     {
         Dollar five = new Dollar(5);
-        five.times(2);
+        five.Times(2);
         Assert.AreEqual(10, five.amount);
     }
 }
@@ -29,7 +29,7 @@ public class Dollar
     {
     }
 
-    public void times(int howMuch)
+    public void Times(int howMuch)
     {
         amount = 5 * 2;
     }
