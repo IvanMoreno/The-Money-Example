@@ -11,6 +11,8 @@ namespace TheMoneyExample.Tests;
 // [] Money rounding?
 // [x] equals()
 // [] hashCode()
+// [] Equal null
+// [] Equal object
 
 public class Tests
 {
