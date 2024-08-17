@@ -2,7 +2,7 @@ namespace TheMoneyExample.Tests;
 
 public class Dollar
 {
-    public int amount;
+    int amount;
 
     public Dollar(int amount)
     {
