@@ -10,6 +10,8 @@ public abstract class Money
     {
         return ((Money)obj).amount == amount && obj.GetType() == GetType();
     }
+
+    public static Money Dollar(int amount) => new Dollar(amount);
 }
 
 public class Dollar : Money
