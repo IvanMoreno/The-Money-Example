@@ -28,18 +28,18 @@ public class Tests
     public void TestMultiplication()
     {
         Money five = Money.Dollar(5);
-        Assert.AreEqual(new Dollar(10), five.Times(2));
-        Assert.AreEqual(new Dollar(15), five.Times(3));
+        Assert.AreEqual(Money.Dollar(10), five.Times(2));
+        Assert.AreEqual(Money.Dollar(15), five.Times(3));
     }
 
     [Test]
     public void TestEquality()
     {
-        Assert.AreEqual(new Dollar(5), new Dollar(5));
-        Assert.AreNotEqual(new Dollar(5), new Dollar(6));
+        Assert.AreEqual(Money.Dollar(5), Money.Dollar(5));
+        Assert.AreNotEqual(Money.Dollar(5), Money.Dollar(6));
         Assert.AreEqual(new Franc(5), new Franc(5));
         Assert.AreNotEqual(new Franc(5), new Franc(6));
-        new Franc(5).Should().NotBe(new Dollar(5));
+        new Franc(5).Should().NotBe(Money.Dollar(5));
     }
     
     [Test]
