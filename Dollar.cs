@@ -33,7 +33,7 @@ public class Dollar : Money
 
 public class Franc : Money
 {
-    public Franc(int amount)
+    public Franc(int amount, string currency)
     {
         this.amount = amount;
         currency = "CHF";
