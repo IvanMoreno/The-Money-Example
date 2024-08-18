@@ -2,13 +2,11 @@ namespace TheMoneyExample.Tests;
 
 public class Money
 {
-    
+    protected int amount;
 }
 
 public class Dollar : Money
 {
-    int amount;
-
     public Dollar(int amount)
     {
         this.amount = amount;
