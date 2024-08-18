@@ -55,5 +55,6 @@ public class Tests
     public void TestCurrency()
     {
         Money.Franc(1).Currency().Should().Be("CHF");
+        Money.Dollar(1).Currency().Should().Be("USD");
     }
 }

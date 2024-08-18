@@ -30,7 +30,7 @@ public class Dollar : Money
 
     public override string Currency()
     {
-        throw new NotImplementedException();
+        return "USD";
     }
 }
 
