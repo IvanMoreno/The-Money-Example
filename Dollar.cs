@@ -13,6 +13,7 @@ public abstract class Money
 
     public static Money Dollar(int amount) => new Dollar(amount);
     public static Money Franc(int amount) => new Franc(amount);
+    public abstract String Currency();
 }
 
 public class Dollar : Money
@@ -26,6 +27,11 @@ public class Dollar : Money
     {
         return new Dollar(amount * multiplier);
     }
+
+    public override string Currency()
+    {
+        throw new NotImplementedException();
+    }
 }
 
 public class Franc : Money
@@ -38,5 +44,10 @@ public class Franc : Money
     public override Money Times(int multiplier)
     {
         return new Franc(amount * multiplier);
+    }
+
+    public override string Currency()
+    {
+        return "CHF";
     }
 }
