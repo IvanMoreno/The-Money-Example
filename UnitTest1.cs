@@ -39,7 +39,7 @@ public class Tests
         Assert.AreNotEqual(Money.Dollar(5), Money.Dollar(6));
         Assert.AreEqual(new Franc(5), new Franc(5));
         Assert.AreNotEqual(new Franc(5), new Franc(6));
-        new Franc(5).Should().NotBe(Money.Dollar(5));
+        Money.Franc(5).Should().NotBe(Money.Dollar(5));
     }
     
     [Test]

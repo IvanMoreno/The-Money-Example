@@ -12,6 +12,7 @@ public abstract class Money
     }
 
     public static Money Dollar(int amount) => new Dollar(amount);
+    public static Money Franc(int amount) => new Franc(amount);
 }
 
 public class Dollar : Money
