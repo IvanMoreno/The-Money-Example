@@ -50,4 +50,10 @@ public class Tests
         Assert.AreEqual(Money.Franc(10), five.Times(2));
         Assert.AreEqual(Money.Franc(15), five.Times(3));
     }
+
+    [Test]
+    public void TestCurrency()
+    {
+        Money.Franc(1).Currency().Should().Be("CHF");
+    }
 }
