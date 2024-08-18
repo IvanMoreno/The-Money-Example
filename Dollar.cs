@@ -1,9 +1,11 @@
 namespace TheMoneyExample.Tests;
 
-public class Money
+public abstract class Money
 {
     protected int amount;
-    
+
+    public abstract Money Times(int multiplier);
+
     public override bool Equals(object? obj)
     {
         return ((Money)obj).amount == amount && obj.GetType() == GetType();
@@ -17,7 +19,7 @@ public class Dollar : Money
         this.amount = amount;
     }
 
-    public Money Times(int multiplier)
+    public override Money Times(int multiplier)
     {
         return new Dollar(amount * multiplier);
     }
@@ -30,7 +32,7 @@ public class Franc : Money
         this.amount = amount;
     }
 
-    public Money Times(int multiplier)
+    public override Money Times(int multiplier)
     {
         return new Franc(amount * multiplier);
     }
