@@ -19,7 +19,7 @@ namespace TheMoneyExample.Tests;
 // [] Dollar/Franc duplication
 // [x] Common equals
 // [] Common times
-// [] Compare Francs with Dollars
+// [x] Compare Francs with Dollars
 
 public class Tests
 {
