@@ -23,10 +23,8 @@ public class Dollar : Money
     }
 }
 
-public class Franc
+public class Franc : Money
 {
-    int amount;
-
     public Franc(int amount)
     {
         this.amount = amount;
