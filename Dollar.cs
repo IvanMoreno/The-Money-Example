@@ -12,17 +12,17 @@ public abstract class Money
         return ((Money)obj).amount == amount && obj.GetType() == GetType();
     }
 
-    public static Money Dollar(int amount) => new Dollar(amount);
+    public static Money Dollar(int amount) => new Dollar(amount, "USD");
     public static Money Franc(int amount) => new Franc(amount, "CHF");
     public String Currency() => currency;
 }
 
 public class Dollar : Money
 {
-    public Dollar(int amount)
+    public Dollar(int amount, string currency)
     {
         this.amount = amount;
-        currency = "USD";
+        this.currency = currency;
     }
 
     public override Money Times(int multiplier)
