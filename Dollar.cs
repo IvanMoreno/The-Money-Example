@@ -18,9 +18,12 @@ public abstract class Money
 
 public class Dollar : Money
 {
+    string currency;
+    
     public Dollar(int amount)
     {
         this.amount = amount;
+        currency = "USD";
     }
 
     public override Money Times(int multiplier)
@@ -30,15 +33,18 @@ public class Dollar : Money
 
     public override string Currency()
     {
-        return "USD";
+        return currency;
     }
 }
 
 public class Franc : Money
 {
+    string currency;
+    
     public Franc(int amount)
     {
         this.amount = amount;
+        currency = "CHF";
     }
 
     public override Money Times(int multiplier)
@@ -48,6 +54,6 @@ public class Franc : Money
 
     public override string Currency()
     {
-        return "CHF";
+        return currency;
     }
 }
