@@ -17,7 +17,7 @@ public class Dollar : Money
         this.amount = amount;
     }
 
-    public Dollar Times(int multiplier)
+    public Money Times(int multiplier)
     {
         return new Dollar(amount * multiplier);
     }
@@ -30,7 +30,7 @@ public class Franc : Money
         this.amount = amount;
     }
 
-    public Franc Times(int multiplier)
+    public Money Times(int multiplier)
     {
         return new Franc(amount * multiplier);
     }
