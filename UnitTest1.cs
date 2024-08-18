@@ -1,3 +1,5 @@
+using FluentAssertions;
+
 namespace TheMoneyExample.Tests;
 
 // We need to be able to add amounts in two different currencies and convert the result given a set of exchange rates.
@@ -36,6 +38,7 @@ public class Tests
         Assert.AreNotEqual(new Dollar(5), new Dollar(6));
         Assert.AreEqual(new Franc(5), new Franc(5));
         Assert.AreNotEqual(new Franc(5), new Franc(6));
+        new Franc(5).Should().NotBe(new Dollar(5));
     }
     
     [Test]
