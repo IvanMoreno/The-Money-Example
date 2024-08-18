@@ -5,7 +5,7 @@ public class Money
     
 }
 
-public class Dollar
+public class Dollar : Money
 {
     int amount;
 
