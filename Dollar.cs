@@ -34,9 +34,4 @@ public class Franc : Money
     {
         return new Franc(amount * multiplier);
     }
-
-    public override bool Equals(object? obj)
-    {
-        return ((Franc)obj).amount == amount;
-    }
 }
