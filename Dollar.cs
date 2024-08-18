@@ -1,5 +1,10 @@
 namespace TheMoneyExample.Tests;
 
+public class Money
+{
+    
+}
+
 public class Dollar
 {
     int amount;
