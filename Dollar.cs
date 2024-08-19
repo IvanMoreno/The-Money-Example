@@ -46,6 +46,6 @@ public class Franc : Money
 
     public override Money Times(int multiplier)
     {
-        return new Money(amount * multiplier, currency);
+        return new Franc(amount * multiplier, currency);
     }
 }
