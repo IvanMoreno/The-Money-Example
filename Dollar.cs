@@ -1,17 +1,17 @@
 namespace TheMoneyExample.Tests;
 
-public abstract class Money
+public class Money
 {
     protected int amount;
     protected string currency;
 
-    protected Money(int amount, string currency)
+    public Money(int amount, string currency)
     {
         this.amount = amount;
         this.currency = currency;
     }
 
-    public abstract Money Times(int multiplier);
+    public Money Times(int multiplier) => null;
 
     public override bool Equals(object? obj)
     {
@@ -28,7 +28,7 @@ public class Dollar : Money
     public Dollar(int amount, string currency)
         : base(amount, currency){}
 
-    public override Money Times(int multiplier)
+    public Money Times(int multiplier)
     {
         return new Dollar(amount * multiplier, currency);
     }
@@ -39,8 +39,8 @@ public class Franc : Money
     public Franc(int amount, string currency)
         : base(amount, currency){}
 
-    public override Money Times(int multiplier)
+    public Money Times(int multiplier)
     {
-        return new Franc(amount * multiplier, currency);
+        return new Money(amount * multiplier, currency);
     }
 }
