@@ -28,6 +28,7 @@ public class Tests
         Assert.AreEqual(Money.Dollar(5), Money.Dollar(5));
         Assert.AreNotEqual(Money.Dollar(5), Money.Dollar(6));
         Money.Franc(5).Should().NotBe(Money.Dollar(5));
+        Money.Franc(5).Equals(null).Should().BeFalse();
     }
 
     [Test]
