@@ -20,4 +20,9 @@ class Sum : Expression
     {
         return new Sum(this, addend);
     }
+
+    public Expression Times(int multiplier)
+    {
+        return new Sum(augend.Times(multiplier), addend.Times(multiplier));
+    }
 }
