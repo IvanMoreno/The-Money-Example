@@ -15,6 +15,11 @@ class Sum : Expression
         this.augend = augend;
         this.addend = addend;
     }
+    
+    public Money Reduce(string to)
+    {
+        return new Money(augend.amount + addend.amount, to);
+    }
 }
 
 public class Bank
@@ -22,7 +27,7 @@ public class Bank
     public Money Reduce(Expression source, string to)
     {
         var sum = (Sum)source;
-        return new Money(sum.augend.amount + sum.addend.amount, to);
+        return sum.Reduce(to);
     }
 }
 
