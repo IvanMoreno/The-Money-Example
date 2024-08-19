@@ -47,4 +47,13 @@ public class Tests
         Money reduced = bank.Reduce(sum, "USD");
         reduced.Should().Be(Money.Dollar(10));
     }
+
+    [Test]
+    public void TestPlusReturnSum()
+    {
+        Money five = Money.Dollar(5);
+        Expression sum = five.Plus(five) as Sum;
+        sum.augend.Should().Be(five);
+        sum.addend.Should().Be(five);
+    }
 }
