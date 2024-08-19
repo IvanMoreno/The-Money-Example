@@ -2,7 +2,7 @@ namespace TheMoneyExample.Tests;
 
 public interface Expression
 {
-    
+    Money Reduce(string to);
 }
 
 class Sum : Expression
@@ -63,6 +63,11 @@ public class Money : Expression
     public Expression Plus(Money addend)
     {
         return new Sum(this, addend);
+    }
+
+    public Money Reduce(string to)
+    {
+        return this;
     }
 
     public override string ToString()
