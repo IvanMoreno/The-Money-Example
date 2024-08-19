@@ -64,4 +64,11 @@ public class Tests
         Bank bank = new Bank();
         bank.Reduce(sum, "USD").Should().Be(Money.Dollar(7));
     }
+
+    [Test]
+    public void TestReduceMoney()
+    {
+        Bank bank = new Bank();
+        bank.Reduce(Money.Dollar(1), "USD").Should().Be(Money.Dollar(1));
+    }
 }
