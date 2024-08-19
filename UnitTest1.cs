@@ -9,7 +9,7 @@ namespace TheMoneyExample.Tests;
 // [] $5 + 10 CHF = $10 if rate is 2:1
 // [] Money rounding?
 // [x] hashCode()
-// [] Equal null
+// [x] Equal null
 // [] Equal object
 
 public class Tests

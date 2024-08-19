@@ -13,9 +13,9 @@ public class Money
 
     public String Currency() => currency;
 
-    public override bool Equals(object? obj)
+    public override bool Equals(object? other)
     {
-        return ((Money)obj).amount == amount && ((Money)obj).currency == currency;
+        return other is Money money && money.amount == amount && money.currency == currency;
     }
 
     public override int GetHashCode()
