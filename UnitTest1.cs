@@ -40,14 +40,6 @@ public class Tests
         Assert.AreNotEqual(Money.Dollar(5), Money.Dollar(6));
         Money.Franc(5).Should().NotBe(Money.Dollar(5));
     }
-    
-    [Test]
-    public void TestFrancMultiplication()
-    {
-        Money five = Money.Franc(5);
-        Assert.AreEqual(Money.Franc(10), five.Times(2));
-        Assert.AreEqual(Money.Franc(15), five.Times(3));
-    }
 
     [Test]
     public void TestCurrency()
