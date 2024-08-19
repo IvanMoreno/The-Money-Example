@@ -36,4 +36,11 @@ public class Tests
         Money.Franc(1).Currency().Should().Be("CHF");
         Money.Dollar(1).Currency().Should().Be("USD");
     }
+
+    [Test]
+    public void TestSimpleAddition()
+    {
+        Money sum = Money.Dollar(5).Plus(Money.Dollar(5));
+        sum.Should().Be(Money.Dollar(10));
+    }
 }
