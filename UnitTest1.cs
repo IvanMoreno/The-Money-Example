@@ -92,8 +92,8 @@ public class Tests
     [Test]
     public void TestMixedAdditions()
     {
-        Money fiveBucks = Money.Dollar(5);
-        Money tenFrancs = Money.Franc(10);
+        Expression fiveBucks = Money.Dollar(5);
+        Expression tenFrancs = Money.Franc(10);
         Bank bank = new Bank();
         bank.AddRate("CHF", "USD", 2);
         bank.Reduce(fiveBucks.Plus(tenFrancs), "USD").Should().Be(Money.Dollar(10));
