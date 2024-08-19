@@ -88,4 +88,14 @@ public class Tests
     {
         new Bank().Rate("USD", "USD").Should().Be(1);
     }
+
+    [Test]
+    public void TestMixedAdditions()
+    {
+        Money fiveBucks = Money.Dollar(5);
+        Money tenFrancs = Money.Franc(10);
+        Bank bank = new Bank();
+        bank.AddRate("CHF", "USD", 2);
+        bank.Reduce(fiveBucks.Plus(tenFrancs), "USD").Should().Be(Money.Dollar(10));
+    }
 }
