@@ -19,18 +19,19 @@ class Sum : Expression
 
 public class Bank
 {
-    public Money Reduce(Expression sum, string usd)
+    public Money Reduce(Expression source, string to)
     {
-        return Money.Dollar(10);
+        var sum = (Sum)source;
+        return new Money(sum.augend.amount + sum.addend.amount, to);
     }
 }
 
 public class Money : Expression
 {
-    int amount;
+    public int amount;
     string currency;
 
-    Money(int amount, string currency)
+    public Money(int amount, string currency)
     {
         this.amount = amount;
         this.currency = currency;
