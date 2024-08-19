@@ -16,7 +16,7 @@ public class Money
 
     public override bool Equals(object? obj)
     {
-        return ((Money)obj).amount == amount && obj.GetType() == GetType();
+        return ((Money)obj).amount == amount && ((Money)obj).currency == currency;
     }
 
     public override string ToString()
