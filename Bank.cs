@@ -1,3 +1,5 @@
+using System.Collections;
+
 namespace TheMoneyExample.Tests;
 
 public class Bank
@@ -23,16 +25,19 @@ public class Bank
             return 0;
         }
     }
+
+    Dictionary<Pair, int> rates = new();
     
     public Money Reduce(Expression source, string to)
     {
         return source.Reduce(this, to);
     }
 
-    public void AddRate(string chf, string usd, int i)
+    public void AddRate(string chf, string usd, int rate)
     {
+        rates.Add(new Pair(chf, usd), rate);
     }
 
     public int Rate(String from, String to)
-        => from == "CHF" && to == "USD" ? 2 : 1;
+        => rates[new Pair(from, to)];
 }
