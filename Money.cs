@@ -5,6 +5,18 @@ public interface Expression
     
 }
 
+class Sum : Expression
+{
+    public Money augend;
+    public Money addend;
+
+    public Sum(Money augend, Money addend)
+    {
+        this.augend = augend;
+        this.addend = addend;
+    }
+}
+
 public class Bank
 {
     public Money Reduce(Expression sum, string usd)
@@ -43,7 +55,7 @@ public class Money : Expression
 
     public Expression Plus(Money addend)
     {
-        return new Money(amount + addend.amount, currency);
+        return new Sum(this, addend);
     }
 
     public override string ToString()

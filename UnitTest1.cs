@@ -52,7 +52,7 @@ public class Tests
     public void TestPlusReturnSum()
     {
         Money five = Money.Dollar(5);
-        Expression sum = five.Plus(five) as Sum;
+        Sum sum = five.Plus(five) as Sum;
         sum.augend.Should().Be(five);
         sum.addend.Should().Be(five);
     }
