@@ -30,7 +30,7 @@ public class Dollar : Money
 
     public override Money Times(int multiplier)
     {
-        return Money.Dollar(amount * multiplier);
+        return new Dollar(amount * multiplier, "USD");
     }
 }
 
@@ -41,6 +41,6 @@ public class Franc : Money
 
     public override Money Times(int multiplier)
     {
-        return Money.Franc(amount * multiplier);
+        return new Franc(amount * multiplier, "CHF");
     }
 }
