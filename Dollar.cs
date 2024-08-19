@@ -11,7 +11,7 @@ public class Money
         this.currency = currency;
     }
 
-    public Money Times(int multiplier) => null;
+    public virtual Money Times(int multiplier) => null;
     public String Currency() => currency;
 
     public override bool Equals(object? obj)
@@ -33,7 +33,7 @@ public class Dollar : Money
     public Dollar(int amount, string currency)
         : base(amount, currency){}
 
-    public Money Times(int multiplier)
+    public override Money Times(int multiplier)
     {
         return new Dollar(amount * multiplier, currency);
     }
@@ -44,7 +44,7 @@ public class Franc : Money
     public Franc(int amount, string currency)
         : base(amount, currency){}
 
-    public Money Times(int multiplier)
+    public override Money Times(int multiplier)
     {
         return new Money(amount * multiplier, currency);
     }
