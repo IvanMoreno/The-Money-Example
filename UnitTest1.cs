@@ -100,4 +100,14 @@ public class Tests
         bank.AddRate("CHF", "USD", 2);
         bank.Reduce(fiveBucks.Plus(tenFrancs), "USD").Should().Be(Money.Dollar(10));
     }
+
+    [Test]
+    public void TestSumPlusMoney()
+    {
+        Expression fiveBucks = Money.Dollar(5);
+        Expression tenFrancs = Money.Franc(10);
+        Bank bank = new Bank();
+        bank.AddRate("CHF", "USD", 2);
+        bank.Reduce(new Sum(fiveBucks, tenFrancs).Plus(fiveBucks), "USD").Should().Be(Money.Dollar(15));
+    }
 }
