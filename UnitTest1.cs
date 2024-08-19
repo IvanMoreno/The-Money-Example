@@ -10,6 +10,7 @@ namespace TheMoneyExample.Tests;
 // [] $5 + $5 = $10
 //      [] Return Money from $5 + $5
 // [x] Bank.reduce(Money)
+// [] Reduce money with conversion
 // [] Money rounding?
 // [] Equal object
 
