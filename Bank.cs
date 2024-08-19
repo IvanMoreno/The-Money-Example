@@ -39,5 +39,5 @@ public class Bank
     }
 
     public int Rate(String from, String to)
-        => rates[new Pair(from, to)];
+        => from == to ? 1 : rates[new Pair(from, to)];
 }
