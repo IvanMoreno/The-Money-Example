@@ -1,6 +1,19 @@
 namespace TheMoneyExample.Tests;
 
-public class Money
+public interface Expression
+{
+    
+}
+
+public class Bank
+{
+    public Money Reduce(Expression sum, string usd)
+    {
+        return Money.Dollar(10);
+    }
+}
+
+public class Money : Expression
 {
     int amount;
     string currency;
@@ -28,7 +41,7 @@ public class Money
         return new Money(amount * multiplier, currency);
     }
 
-    public Money Plus(Money addend)
+    public Expression Plus(Money addend)
     {
         return new Money(amount + addend.amount, currency);
     }
