@@ -13,6 +13,6 @@ class Sum : Expression
     
     public Money Reduce(Bank bank, string to)
     {
-        return new Money(augend.amount + addend.amount, to);
+        return new Money(augend.Reduce(bank, to).amount + addend.Reduce(bank, to).amount, to);
     }
 }
