@@ -73,4 +73,12 @@ public class Tests
         Bank bank = new Bank();
         bank.Reduce(Money.Dollar(1), "USD").Should().Be(Money.Dollar(1));
     }
+
+    [Test]
+    public void TestReduceMoneyDifferentCurrency()
+    {
+        Bank bank = new Bank();
+        bank.AddRate("CHF", "USD", 2);
+        bank.Reduce(Money.Franc(2), "USD").Should().Be(Money.Dollar(1));
+    }
 }
