@@ -110,4 +110,14 @@ public class Tests
         bank.AddRate("CHF", "USD", 2);
         bank.Reduce(new Sum(fiveBucks, tenFrancs).Plus(fiveBucks), "USD").Should().Be(Money.Dollar(15));
     }
+
+    [Test]
+    public void TestSumTimes()
+    {
+        Expression fiveBucks = Money.Dollar(5);
+        Expression tenFrancs = Money.Franc(10);
+        Bank bank = new Bank();
+        bank.AddRate("CHF", "USD", 2);
+        bank.Reduce(new Sum(fiveBucks, tenFrancs).Times(2), "USD").Should().Be(Money.Dollar(20));
+    }
 }
