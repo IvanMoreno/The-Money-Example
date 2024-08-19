@@ -2,7 +2,7 @@ namespace TheMoneyExample.Tests;
 
 public interface Expression
 {
-    Money Reduce(string to);
+    Money Reduce(Bank bank, string to);
 }
 
 class Sum : Expression
@@ -16,7 +16,7 @@ class Sum : Expression
         this.addend = addend;
     }
     
-    public Money Reduce(string to)
+    public Money Reduce(Bank bank, string to)
     {
         return new Money(augend.amount + addend.amount, to);
     }
@@ -26,7 +26,7 @@ public class Bank
 {
     public Money Reduce(Expression source, string to)
     {
-        return source.Reduce(to);
+        return source.Reduce(this, to);
     }
 
     public void AddRate(string chf, string usd, int i)
@@ -67,7 +67,7 @@ public class Money : Expression
         return new Sum(this, addend);
     }
 
-    public Money Reduce(string to)
+    public Money Reduce(Bank bank, string to)
     {
         var rate = currency == "CHF" && to == "USD" ? 2 : 1;
 
