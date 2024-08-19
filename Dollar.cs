@@ -33,12 +33,6 @@ public class Money
     public static Money Franc(int amount) => new Money(amount, "CHF");
 }
 
-public class Dollar : Money
-{
-    public Dollar(int amount, string currency)
-        : base(amount, currency){}
-}
-
 public class Franc : Money
 {
     public Franc(int amount, string currency)
