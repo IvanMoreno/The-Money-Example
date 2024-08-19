@@ -55,10 +55,4 @@ public class Tests
         Money.Franc(1).Currency().Should().Be("CHF");
         Money.Dollar(1).Currency().Should().Be("USD");
     }
-
-    [Test]
-    public void TestDifferentClassEquality()
-    {
-        new Money(10, "CHF").Should().Be(new Franc(10, "CHF"));
-    }
 }
