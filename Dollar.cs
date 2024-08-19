@@ -5,7 +5,7 @@ public class Money
     int amount;
     string currency;
 
-    public Money(int amount, string currency)
+    Money(int amount, string currency)
     {
         this.amount = amount;
         this.currency = currency;
