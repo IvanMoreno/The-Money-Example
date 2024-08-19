@@ -18,6 +18,11 @@ public class Money
         return ((Money)obj).amount == amount && ((Money)obj).currency == currency;
     }
 
+    public override int GetHashCode()
+    {
+        return HashCode.Combine(amount, currency);
+    }
+
     public Money Times(int multiplier)
     {
         return new Money(amount * multiplier, currency);
