@@ -14,7 +14,7 @@ namespace TheMoneyExample.Tests;
 // [x] Reduce(Bank, String)
 // [] Money rounding?
 // [] Equal object
-// [] Sum.plus
+// [x] Sum.plus
 // [] Expression.times
 
 public class Tests

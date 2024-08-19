@@ -18,6 +18,6 @@ class Sum : Expression
 
     public Expression Plus(Expression addend)
     {
-        return null;
+        return new Sum(this, addend);
     }
 }
