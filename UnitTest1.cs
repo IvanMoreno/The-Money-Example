@@ -56,4 +56,12 @@ public class Tests
         sum.augend.Should().Be(five);
         sum.addend.Should().Be(five);
     }
+
+    [Test]
+    public void TestReduceSum()
+    {
+        Expression sum = new Sum(Money.Dollar(3), Money.Dollar(4));
+        Bank bank = new Bank();
+        bank.Reduce(sum, "USD").Should().Be(Money.Dollar(7));
+    }
 }
