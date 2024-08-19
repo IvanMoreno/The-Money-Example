@@ -23,7 +23,7 @@ public class Money : Expression
         return HashCode.Combine(amount, currency);
     }
 
-    public Money Times(int multiplier)
+    public Expression Times(int multiplier)
     {
         return new Money(amount * multiplier, currency);
     }
