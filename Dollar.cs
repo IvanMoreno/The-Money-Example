@@ -12,15 +12,20 @@ public class Money
     }
 
     public Money Times(int multiplier) => null;
+    public String Currency() => currency;
 
     public override bool Equals(object? obj)
     {
         return ((Money)obj).amount == amount && obj.GetType() == GetType();
     }
 
+    public override string ToString()
+    {
+        return amount + " " + currency;
+    }
+
     public static Money Dollar(int amount) => new Dollar(amount, "USD");
     public static Money Franc(int amount) => new Franc(amount, "CHF");
-    public String Currency() => currency;
 }
 
 public class Dollar : Money
