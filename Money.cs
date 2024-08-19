@@ -28,7 +28,7 @@ public class Money : Expression
         return new Money(amount * multiplier, currency);
     }
 
-    public Expression Plus(Money addend)
+    public Expression Plus(Expression addend)
     {
         return new Sum(this, addend);
     }
