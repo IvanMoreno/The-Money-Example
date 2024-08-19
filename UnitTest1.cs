@@ -81,4 +81,10 @@ public class Tests
         bank.AddRate("CHF", "USD", 2);
         bank.Reduce(Money.Franc(2), "USD").Should().Be(Money.Dollar(1));
     }
+
+    [Test]
+    public void TestIdentityRate()
+    {
+        new Bank().Rate("USD", "USD").Should().Be(1);
+    }
 }
