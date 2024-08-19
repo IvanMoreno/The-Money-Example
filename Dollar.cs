@@ -30,7 +30,7 @@ public class Dollar : Money
 
     public override Money Times(int multiplier)
     {
-        return new Dollar(amount * multiplier, "USD");
+        return new Dollar(amount * multiplier, currency);
     }
 }
 
@@ -41,6 +41,6 @@ public class Franc : Money
 
     public override Money Times(int multiplier)
     {
-        return new Franc(amount * multiplier, "CHF");
+        return new Franc(amount * multiplier, currency);
     }
 }
