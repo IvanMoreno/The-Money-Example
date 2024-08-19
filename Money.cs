@@ -26,6 +26,7 @@ public class Bank
 {
     public Money Reduce(Expression source, string to)
     {
+        if(source is Money) return source as Money;
         var sum = (Sum)source;
         return sum.Reduce(to);
     }
