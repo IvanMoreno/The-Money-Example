@@ -32,6 +32,9 @@ public class Bank
     public void AddRate(string chf, string usd, int i)
     {
     }
+
+    public int Rate(String from, String to)
+        => from == "CHF" && to == "USD" ? 2 : 1;
 }
 
 public class Money : Expression
@@ -69,7 +72,7 @@ public class Money : Expression
 
     public Money Reduce(Bank bank, string to)
     {
-        var rate = currency == "CHF" && to == "USD" ? 2 : 1;
+        var rate = bank.Rate(currency, to);
 
         return new Money(amount / rate, to);
     }
