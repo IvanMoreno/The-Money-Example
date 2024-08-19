@@ -21,7 +21,7 @@ namespace TheMoneyExample.Tests;
 // [x] Common times
 // [x] Compare Francs with Dollars
 // [x] Currency?
-// [] Delete testFrancMultiplication?
+// [x] Delete testFrancMultiplication?
 
 public class Tests
 {
