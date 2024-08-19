@@ -2,8 +2,8 @@ namespace TheMoneyExample.Tests;
 
 public class Money
 {
-    protected int amount;
-    protected string currency;
+    int amount;
+    string currency;
 
     public Money(int amount, string currency)
     {
